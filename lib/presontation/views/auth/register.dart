@@ -1,7 +1,7 @@
 import 'package:amhere/data/user.dart';
 import 'package:amhere/domain/get_controller/auth_controller/auth_controller.dart';
-import 'package:amhere/presontation/components/header_auth_component.dart';
-import 'package:amhere/presontation/components/text_filed_component.dart';
+import 'package:amhere/presontation/components/auth_components/header_auth_component.dart';
+import 'package:amhere/presontation/components/auth_components/text_filed_component.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

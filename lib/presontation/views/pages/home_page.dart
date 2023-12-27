@@ -1,37 +1,25 @@
 
 
-import 'dart:async';
-
+import 'package:amhere/presontation/components/widgets/buttom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-
-  final Completer<GoogleMapController> _controller = Completer<GoogleMapController>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: GoogleMap(
-          mapType: MapType.normal,
-          initialCameraPosition: const CameraPosition(
-            target: LatLng(31.783408343362833, -7.085225433111191),
-          ),
-          onMapCreated: (GoogleMapController controller) {
-            _controller.complete(controller);
-          },
-          onTap: (argument) {
-            print(argument);
-          },
-        ),
+      appBar: AppBar(
+        title: const Text("Home").animate().fade(delay: const Duration(microseconds: 900)).scale(),
+        actions: [
+          IconButton(onPressed: (){}, icon: const Icon(Icons.person))
+        ],
+      ),
+      body: const Stack(
+        children: [
+          ButtomBar()
+        ],
       ),
     );
   }

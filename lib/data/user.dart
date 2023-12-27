@@ -21,12 +21,18 @@ class User {
     required this.lang,
   });
 
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
+      userName: json['username'],
+      email : json['email'],
+      password: json['password'],
+      age : json['age'],
+      city : json['city'] ,
+      country:  json['country'] ,
+      gender:  json['gender'] ,
+      lang: json['lant'],
+      lant: json['lang'],
+    );
+  }
 
-  // factory Book.fromJson(Map<String, dynamic> json) {
-  //   return Book(
-  //     id: json['id'],
-  //     title: json['title'],
-  //     author: json['author'],
-  //   );
-  // }
 }

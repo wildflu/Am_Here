@@ -1,7 +1,9 @@
 
-import 'package:amhere/presontation/components/header_auth_component.dart';
-import 'package:amhere/presontation/components/text_filed_component.dart';
+import 'package:amhere/domain/get_controller/auth_controller/auth_controller.dart';
+import 'package:amhere/presontation/components/auth_components/header_auth_component.dart';
+import 'package:amhere/presontation/components/auth_components/text_filed_component.dart';
 import 'package:amhere/presontation/views/auth/register.dart';
+import 'package:amhere/presontation/views/pages/explore_page.dart';
 import 'package:amhere/presontation/views/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,6 +13,8 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AuthController authController = Get.put(AuthController());
+    authController.getTheLocation();
     TextEditingController emailController = TextEditingController();
     TextEditingController paswordController = TextEditingController();
     return Scaffold(
