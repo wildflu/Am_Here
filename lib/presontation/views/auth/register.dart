@@ -181,19 +181,7 @@ class RegisterPage extends StatelessWidget {
                           backgroundColor: Colors.blue),
                       onPressed: () async{
                         formKey.currentState!.validate();
-                        User user = User(
-                          userName: fullnamecontroller.text,
-                          email: emailcontroller.text,
-                          password: passwordcontroller.text,
-                          age: int.parse(agecontroller.text),
-                          city: citycontroller.text,
-                          country: countrycontroller.text,
-                          gender: genderOptions.first,
-                          lant: 10,
-                          lang: 22
-                        );
-                        bool res = await authController.registerUser(user);
-                        print(res);
+                        
                       },
                       child: const Text(
                         "Register",
