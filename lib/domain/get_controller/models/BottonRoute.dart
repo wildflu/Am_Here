@@ -5,5 +5,6 @@ class BottonRoute{
   String label;
   IconData icon;
   bool isActive;
-  BottonRoute({required this.label, required this.icon, required this.isActive});
+  Widget routePage;
+  BottonRoute({required this.label, required this.icon, required this.isActive, required this.routePage});
 }

@@ -2,9 +2,14 @@
 
 
 import 'package:amhere/domain/get_controller/domain/bottom_bar_controller.dart';
+import 'package:amhere/presontation/views/pages/chats_page.dart';
+import 'package:amhere/presontation/views/pages/explore_page.dart';
+import 'package:amhere/presontation/views/pages/home_page.dart';
+import 'package:amhere/presontation/views/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
+import 'package:get/get_rx/src/rx_typedefs/rx_typedefs.dart';
 
 
 BottomBarController btmController = Get.put(BottomBarController());
@@ -94,13 +99,16 @@ class ButtomBar extends StatelessWidget {
                   right: 0,
                   left: 0,
                   child: Center(
-                    child: Container(
-                      width: 70,
-                      height: 70,
-                      decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(40), border: Border.all(width: 3, color: Colors.blueAccent)),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(40),
-                        child: Image.asset('assets/profile.png', fit: BoxFit.contain,),
+                    child: GestureDetector(
+                      onTap: ()=>Get.to(()=> const ProfilePage()),
+                      child: Container(
+                        width: 70,
+                        height: 70,
+                        decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(40), border: Border.all(width: 3, color: Colors.blueAccent)),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(40),
+                          child: Image.asset('assets/profile.png', fit: BoxFit.contain,),
+                        ),
                       ),
                     )
                   ),

@@ -3,13 +3,13 @@
 
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class ChatsPage extends StatelessWidget {
+  const ChatsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text("Home Page"),
+      child: Text("Chats Page"),
     );
   }
 }

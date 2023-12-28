@@ -1,5 +1,6 @@
 
 
+import 'package:amhere/presontation/views/pages/app_page.dart';
 import 'package:amhere/presontation/views/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,6 +17,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Permisstion permitionController = Get.put(Permisstion());
-    return const HomePage();
+    return const AppPage();
   }
 }
