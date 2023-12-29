@@ -18,42 +18,19 @@ class ChatCardComponent extends StatelessWidget {
       child: Column(
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text(name, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
-              Row(
-                children: [
-                  const NotifierContainerComponent(),
-                  const SizedBox(width: 4,),
-                  Text("($newMessagesCount) MS"),
-                ],
-              )
+              const NotifierContainerComponent(),
+              const SizedBox(width: 4,),
+              Text("($newMessagesCount) MS"),
             ],
           ),
-          const SizedBox(height: 15,),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Expanded(
-                flex: 3,
-                child: SizedBox(
-                  height: 70,
-                  child: Stack(
-                    children: [
-                      ChatUserProfile(),
-                      Positioned(
-                        top: 5,
-                        left: 25,
-                        child: ChatUserProfile()),
-                        Positioned(
-                        top: 10,
-                        left: 50,
-                        child: ChatUserProfile()),
-                    ],
-                  ),
-                ),
-              ),
-              Expanded(flex:2,child: Text(lastMessage.length>17 ? lastMessage.substring(0, 17):lastMessage, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400, color: islastMessageReaded ?Colors.black26 :Colors.black),))
+              const ChatUserProfile(),
+              Text(lastMessage.length>17 ? lastMessage.substring(0, 17):lastMessage, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400, color: islastMessageReaded ?Colors.black26 :Colors.black),)
             ],
           )
         ],
