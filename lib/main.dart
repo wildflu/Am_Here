@@ -1,11 +1,13 @@
 
 
 import 'package:amhere/presontation/views/pages/app_page.dart';
-import 'package:amhere/presontation/views/pages/home_page.dart';
+import 'package:amhere/services/login_user.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await initial();
   runApp(const GetMaterialApp(
     home: MyApp(),
     title: 'App',
@@ -19,4 +21,8 @@ class MyApp extends StatelessWidget {
     // Permisstion permitionController = Get.put(Permisstion());
     return const AppPage();
   }
+}
+
+Future initial() async {
+  await Get.putAsync(() => MyServices().intialservices());
 }

@@ -1,4 +1,6 @@
 
+import 'package:amhere/services/login_user.dart';
+
 class User {
   String userName;
   String email;
@@ -33,6 +35,10 @@ class User {
       lang: json['lant'],
       lant: json['lang'],
     );
+  }
+
+  bool isLoginUser() {
+    return loginUser!.email == email && loginUser!.userName == userName;
   }
 
 }
