@@ -22,7 +22,7 @@ class ChatCardComponent extends StatelessWidget {
             children: [
               const NotifierContainerComponent(),
               const SizedBox(width: 4,),
-              Text("($newMessagesCount) MS"),
+              Text("($newMessagesCount) MS", style: TextStyle(color: Theme.of(context).primaryColor),),
             ],
           ),
           Row(
@@ -30,7 +30,7 @@ class ChatCardComponent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const ChatUserProfile(),
-              Text(lastMessage.length>17 ? lastMessage.substring(0, 17):lastMessage, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400, color: islastMessageReaded ?Colors.black26 :Colors.black),)
+              Text(lastMessage.length>17 ? lastMessage.substring(0, 17):lastMessage, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400, color: islastMessageReaded ?Theme.of(context).unselectedWidgetColor :Colors.black),)
             ],
           )
         ],

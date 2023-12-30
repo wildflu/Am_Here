@@ -2,6 +2,7 @@
 
 
 
+import 'package:amhere/domain/get_controller/app_controller/app_page_controller.dart';
 import 'package:amhere/domain/get_controller/domain/bottom_bar_controller.dart';
 import 'package:amhere/presontation/components/widgets/buttom_bar.dart';
 import 'package:flutter/material.dart';
@@ -12,16 +13,21 @@ class AppPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          GetBuilder<BottomBarController>(
-            init: BottomBarController(),
-            builder: (controller) => controller.bottomBarRoutes[controller.currantIndexPage].routePage,
+    return GetBuilder<AppPageController>(
+      init: AppPageController(),
+      builder: (controller) {
+        return Scaffold(
+          body: Stack(
+            children: [
+              GetBuilder<BottomBarController>(
+                init: BottomBarController(),
+                builder: (controller) => controller.bottomBarRoutes[controller.currantIndexPage].routePage,
+              ),
+              const ButtomBar()
+            ],
           ),
-          const ButtomBar()
-        ],
-      ),
+        );
+      },
     );
   }
 }

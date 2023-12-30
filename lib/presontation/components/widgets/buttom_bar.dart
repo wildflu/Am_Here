@@ -2,14 +2,10 @@
 
 
 import 'package:amhere/domain/get_controller/domain/bottom_bar_controller.dart';
-import 'package:amhere/presontation/views/pages/chats_page.dart';
-import 'package:amhere/presontation/views/pages/explore_page.dart';
-import 'package:amhere/presontation/views/pages/home_page.dart';
 import 'package:amhere/presontation/views/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
-import 'package:get/get_rx/src/rx_typedefs/rx_typedefs.dart';
 
 
 BottomBarController btmController = Get.put(BottomBarController());

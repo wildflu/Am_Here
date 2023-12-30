@@ -1,5 +1,7 @@
 
 
+import 'package:amhere/domain/get_controller/themes/theme_controller.dart';
+import 'package:amhere/domain/get_controller/themes/theme_data.dart';
 import 'package:amhere/presontation/views/pages/app_page.dart';
 import 'package:amhere/services/login_user.dart';
 import 'package:flutter/material.dart';
@@ -8,9 +10,10 @@ import 'package:get/get.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await initial();
-  runApp(const GetMaterialApp(
-    home: MyApp(),
+  runApp(GetMaterialApp(
+    home:const MyApp(),
     title: 'App',
+    theme: ThemeController.currantTheme,
   ));
 }
 

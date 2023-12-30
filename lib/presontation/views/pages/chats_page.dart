@@ -18,7 +18,7 @@ class ChatsPage extends StatelessWidget {
         return controller.chats!.isNotEmpty
           ? ListView.separated(
             itemBuilder: (context, index) {
-              return GestureDetector(
+              return InkWell(
                 onTap: ()=> controller.chatClicked(controller.chats![index]),
                 child: ChatCardComponent(
                   lastMessage: controller.chats![index].messages.last.text,

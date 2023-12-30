@@ -27,17 +27,19 @@ class ChatController extends GetxController{
   }
 
   sendMessage(Chat chat) async{
-    await chatRepository.sendMessage(
-      chat, 
-      Message(
-        text: message.text, 
-        sender: loginUser!, 
-        reciver: getReciverUser(), 
-        isReaded: false,
-      )
-    );
-    message.clear();
-    update();
+    if(message.text.isNotEmpty){
+      await chatRepository.sendMessage(
+        chat, 
+        Message(
+          text: message.text, 
+          sender: loginUser!, 
+          reciver: getReciverUser(), 
+          isReaded: false,
+        )
+      );
+      message.clear();
+      update();
+    }
   }
 
   User getReciverUser() {

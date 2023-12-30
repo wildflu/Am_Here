@@ -2,6 +2,7 @@
 
 import 'package:amhere/data/chat.dart';
 import 'package:amhere/domain/get_controller/chat_controller/chat_controller.dart';
+import 'package:amhere/presontation/components/widgets/message_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
@@ -28,13 +29,9 @@ class ConvertationPage extends StatelessWidget {
                   bool isLoginUser = chat.messages[index].sender.isLoginUser();
                   return Align(
                     alignment: isLoginUser ? Alignment.topRight: Alignment.topLeft,
-                    child: Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color:isLoginUser? Colors.grey:Colors.blueGrey),
-                      margin: const EdgeInsets.all(5),
-                      child: Text(chat.messages[index].text)
-                    )
+                    child: MessagesCardComponent(testMessage: chat.messages[index].text, fromMe: isLoginUser),
                   ).animate().fade();
+                  
                 },
               ),
             ),
@@ -87,7 +84,7 @@ class ConvertationPage extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ).animate().moveY(begin: 20)
           ],
         ),
       );
