@@ -14,9 +14,6 @@ class ThemeController extends GetxController {
     if(left == 4){
       left = 52;
       right = 4;
-      // currantTheme = Themes.custumDark;
-      Get.changeTheme(Themes.custumDark);
-      Get.changeThemeMode(ThemeMode.dark);
     }else {
       left = 4;
       right = 52;

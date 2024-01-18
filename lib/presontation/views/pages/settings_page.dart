@@ -47,10 +47,9 @@ class SettingsPage extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        const Text(
+                        Text(
                           "Edit",
-                          style: TextStyle(
-                              fontSize: 17, fontWeight: FontWeight.bold),
+                          style: Theme.of(context).textTheme.titleSmall,
                         ),
                         IconButton(
                             style: IconButton.styleFrom(
@@ -91,7 +90,7 @@ class SettingsPage extends StatelessWidget {
                 value: controller.isExceptMessages,
                 onChanged: (value) => controller.exceptMessagesChangeSatus(value),
               ),
-              text: "Except Messages"),
+              text: "Enable Messages"),
           SettingCardComponent(
               color: Colors.deepOrange.shade100,
               component: const ChangeThemeComponent(),

@@ -20,7 +20,7 @@ class ChatCardComponent extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              const NotifierContainerComponent(),
+              const NotifierContainerComponent(color: Colors.red),
               const SizedBox(width: 4,),
               Text("($newMessagesCount) MS", style: TextStyle(color: Theme.of(context).primaryColor),),
             ],

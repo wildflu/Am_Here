@@ -24,7 +24,7 @@ class Themes extends GetxController{
     ),
     scaffoldBackgroundColor: Colors.white,
     textTheme: const TextTheme(
-      titleLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      titleLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
       titleMedium: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
       titleSmall: TextStyle(fontSize: 17, fontWeight: FontWeight.w400, color: Colors.black26),
       bodyLarge: TextStyle(fontSize: 17, fontWeight: FontWeight.w400, color: Colors.black12),

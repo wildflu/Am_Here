@@ -22,10 +22,11 @@ class ChangeThemeComponent extends StatelessWidget {
           width: 100,
           height: 50,
           decoration: BoxDecoration(
-            // border: Border.all(width: 1, color: Colors.black),
             borderRadius: BorderRadius.circular(30)
           ),
           child: Stack(
+            alignment: AlignmentDirectional.topStart,
+            textDirection: TextDirection.ltr,
             children: [
               const Center(
                 child: Row(

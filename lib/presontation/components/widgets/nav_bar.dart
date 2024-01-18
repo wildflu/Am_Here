@@ -43,14 +43,14 @@ class NavBar extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              const Expanded(child: Text("Am Here", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),)),
+              Expanded(child: Text("Am Here", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Theme.of(context).primaryColor))),
               Stack(
                 children: [
                   IconButton(onPressed: ()=> navBarController.notificationClicked(), icon: const Icon(Icons.notifications_none, size: 25,)),
                   const Positioned(
                     right: 15,
                     top: 15,
-                    child: NotifierContainerComponent()),
+                    child: NotifierContainerComponent(color: Colors.red,)),
                 ]
               ),
               Stack(
@@ -59,7 +59,7 @@ class NavBar extends StatelessWidget {
                   const Positioned(
                     right: 15,
                     top: 15,
-                    child: NotifierContainerComponent()),
+                    child: NotifierContainerComponent(color: Colors.red)),
                 ]
               ),
             ],

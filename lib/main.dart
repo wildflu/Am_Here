@@ -1,8 +1,7 @@
 
 
 import 'package:amhere/domain/get_controller/themes/theme_controller.dart';
-import 'package:amhere/domain/get_controller/themes/theme_data.dart';
-import 'package:amhere/presontation/views/pages/app_page.dart';
+import 'package:amhere/presontation/views/splash/splash_page.dart';
 import 'package:amhere/services/login_user.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Permisstion permitionController = Get.put(Permisstion());
-    return const AppPage();
+    return const SplashPage();
   }
 }
 

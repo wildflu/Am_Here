@@ -27,13 +27,13 @@ class ActionLocationListView extends StatelessWidget {
                 )
               ]
             ),
-            child: const Row(
+            child: Row(
               children: [
-                CircleAvatar(radius: 25,),
-                SizedBox(width: 10),
+                const CircleAvatar(radius: 25,),
+                const SizedBox(width: 10),
                 Padding(
-                  padding: EdgeInsets.only(right: 25),
-                  child: Text("fiverte"),
+                  padding: const EdgeInsets.only(right: 25),
+                  child: Text("fiverte", style: Theme.of(context).textTheme.titleSmall,),
                 )
               ],
             ),

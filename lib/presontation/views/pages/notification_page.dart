@@ -57,7 +57,7 @@ class NotificationCardComponent extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        isReaded? Container() : const NotifierContainerComponent(),
+        isReaded? Container() : const NotifierContainerComponent(color: Colors.red),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.only(left: 10),
